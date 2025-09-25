@@ -32,7 +32,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
 
       <div className="container mx-auto px-6 text-center z-10">
         <p className="text-text-secondary text-sm mb-4 font-medium tracking-wide uppercase">
-          Instituto Tecnológico
+          Interacción Humano Computador
         </p>
         
         <h1 className="text-5xl md:text-7xl font-bold text-text-primary mb-6 leading-tight">

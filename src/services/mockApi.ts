@@ -100,7 +100,7 @@ const mockProcess: Process = {
   steps: [
     {
       id: 1,
-      title: 'Análisis',
+      title: 'Bosquejos',
       media: { type: 'image' as const, src: projectAcademic },
       summary: 'Investigación exhaustiva de requisitos, análisis de stakeholders y definición del alcance del proyecto. Identificamos oportunidades y riesgos para crear soluciones efectivas.',
       links: [

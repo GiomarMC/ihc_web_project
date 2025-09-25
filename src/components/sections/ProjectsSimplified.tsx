@@ -14,15 +14,15 @@ interface ProjectData {
 
 const vrProject: ProjectData = {
   id: "vr-game",
-  title: "Videojuego VR",
-  shortDescription: "Experiencia inmersiva de realidad virtual que combina entretenimiento educativo con tecnología de vanguardia para crear mundos interactivos únicos.",
-  mission: "Crear una plataforma de entretenimiento que eduque sobre sostenibilidad ambiental a través de experiencias inmersivas en realidad virtual.",
+  title: "Videojuego VR - Warren House",
+  shortDescription: "Experiencia inmersiva de realidad virtual donde el jugador aprende a interpretar con el ambiente y usar voz con gestos para debilitar y expulsar a las entidades.",
+  mission: "Diseñar y evaluar una experiencia VR de casa embrujada, que fomente la resolución intuitiva mediante pistas ambientales y control multimodal (voz y manos), aplicando principios de diseño centrado en la persona.",
   details: [
-    "Desarrollado con Unity 3D y tecnologías VR de última generación",
-    "Mecánicas de juego que enseñan sobre conservación y reciclaje",
-    "Entornos 3D fotorrealistas con ecosistemas interactivos",
-    "Sistema de logros y progresión que motiva el aprendizaje",
-    "Compatible con múltiples dispositivos VR (Oculus, HTC Vive, etc.)"
+    "Diseño Centrado en el Usuario con ciclos de prototipado y pruebas de usabilidad sin tutoriales explícitos",
+    "Afordancias y significadores que guían a leer la biblia y usar la linterna para debilitar/expulsar al ente",
+    "Interacción multimodal mediante reconocimiento de voz, XR Hands y apuntado con linterna mediante XR Interaction Toolkit",
+    "Métricas de descubribilidad y tasa de éxito de tareas, con ayuda de análisis de errores",
+    "Desarrollado con Unity, compatible con Meta/Oculus"
   ]
 };
 

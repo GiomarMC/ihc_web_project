@@ -56,7 +56,7 @@ const Process = ({ activeStep, onStepChange }: ProcessProps) => {
         >
           <h2 className="text-4xl font-bold text-text-primary mb-4">Proceso de Desarrollo</h2>
           <p className="text-text-secondary text-lg mb-8">
-            Conoce nuestra metodología paso a paso para crear soluciones tecnológicas innovadoras.
+            Conoce nuestro paso a paso para crear nuestro proyecto.
           </p>
         </div>
 
