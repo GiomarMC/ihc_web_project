@@ -1,11 +1,11 @@
 // Mock API service for the portfolio app
-import projectAcademic from "@/assets/project-academic.jpg";
-import projectIot from "@/assets/project-iot.jpg";
-import projectEcommerce from "@/assets/project-ecommerce.jpg";
-import avatarAna from "@/assets/avatar-ana.jpg";
-import avatarCarlos from "@/assets/avatar-carlos.jpg";
-import avatarMaria from "@/assets/avatar-maria.jpg";
-import avatarDiego from "@/assets/avatar-diego.jpg";
+import projectAcademic from "@/assets/hero-bg.jpg";
+import projectIot from "@/assets/hero-bg.jpg";
+import projectEcommerce from "@/assets/hero-bg.jpg";
+import avatarAna from "@/assets/hero-bg.jpg";
+import avatarCarlos from "@/assets/hero-bg.jpg";
+import avatarMaria from "@/assets/hero-bg.jpg";
+import avatarDiego from "@/assets/hero-bg.jpg";
 
 export interface Project {
   id: string;
