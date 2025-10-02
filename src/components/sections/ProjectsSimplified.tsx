@@ -135,7 +135,7 @@ const ProjectCard = ({ project, onNavigateToProcess }: ProjectCardProps) => {
           ref={detailsRef}
           className={cn(
             "border-t border-purple-border bg-surface/50 overflow-hidden",
-            isExpanded && !isAnimating ? "animate-expand" : "animate-collapse",
+            isExpanded ? "animate-expand" : "animate-collapse",
             // Respect reduced motion preference
             "motion-reduce:animate-none motion-reduce:transition-none"
           )}
@@ -148,7 +148,7 @@ const ProjectCard = ({ project, onNavigateToProcess }: ProjectCardProps) => {
               <h3 
                 ref={panelTitleRef}
                 id={`project-title-${project.id}`}
-                className="text-lg font-semibold text-text-primary mb-3 focus:outline-none focus:ring-2 focus:ring-cyan focus:ring-offset-2 focus:ring-offset-background rounded"
+                className="text-lg font-semibold text-text-primary mb-3 focus:outline-none rounded"
                 tabIndex={-1}
               >
                 Misión del proyecto
@@ -211,10 +211,12 @@ const ProjectsSimplified = () => {
 
   const handleNavigateToProcess = () => {
     const processElement = document.getElementById('process');
-    processElement?.scrollIntoView({ 
-      behavior: 'smooth',
-      block: 'start'
-    });
+    if (processElement) {
+      processElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   };
 
   return (
