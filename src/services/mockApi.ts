@@ -6,6 +6,19 @@ import avatarAna from "@/assets/hero-bg.jpg";
 import avatarCarlos from "@/assets/hero-bg.jpg";
 import avatarMaria from "@/assets/hero-bg.jpg";
 import avatarDiego from "@/assets/hero-bg.jpg";
+import processBocetos from "@/assets/process/bocetos.jpg";
+import processBocetos1 from "@/assets/process/bocetos1.jpeg";
+import processBocetos2 from "@/assets/process/bocetos2.jpeg";
+import processBocetos3 from "@/assets/process/bocetos3.jpeg";
+import processBocetos4 from "@/assets/process/bocetos4.jpeg";
+import processBocetos5 from "@/assets/process/bocetos5.jpeg";
+import processEscena from "@/assets/process/escena.jpg";
+import processEscena1 from "@/assets/process/escena1.jpeg";
+import processEscena2 from "@/assets/process/escena2.jpeg";
+import processEscena3 from "@/assets/process/escena3.jpeg";
+import processEscena4 from "@/assets/process/escena4.jpeg";
+import processEscena5 from "@/assets/process/escena5.jpeg";
+import processMaqueta from "@/assets/process/maqueta.jpg";
 
 export interface Project {
   id: string;
@@ -20,13 +33,16 @@ export interface Project {
   };
 }
 
+export interface ProcessMedia {
+  type: 'image' | 'video' | 'gif';
+  src: string;
+  alt?: string;
+}
+
 export interface ProcessStep {
   id: number;
   title: string;
-  media: {
-    type: 'image' | 'video' | 'gif';
-    src: string;
-  };
+  media: ProcessMedia[];
   summary: string;
   links: Array<{
     title: string;
@@ -100,56 +116,42 @@ const mockProcess: Process = {
   steps: [
     {
       id: 1,
-      title: 'Bosquejos',
-      media: { type: 'image' as const, src: projectAcademic },
-      summary: 'Investigación exhaustiva de requisitos, análisis de stakeholders y definición del alcance del proyecto. Identificamos oportunidades y riesgos para crear soluciones efectivas.',
-      links: [
-        { title: 'Metodología de análisis', url: '#' },
-        { title: 'Plantillas de requisitos', url: '#' }
-      ]
+      title: 'Bosquejos (low-fi)',
+      summary: 'Bocetos en papel, mapa del departamento y reglas básicas del juego.',
+      media: [
+        { type: 'image', src: processBocetos},
+        { type: 'image', src: processBocetos2},
+        { type: 'image', src: processBocetos3},
+        { type: 'image', src: processBocetos4},
+        { type: 'image', src: processBocetos5}
+      ],
+      links: []
     },
     {
       id: 2,
-      title: 'Diseño',
-      media: { type: 'image' as const, src: projectEcommerce },
-      summary: 'Creación de wireframes, prototipos interactivos y sistema de diseño. Definimos la arquitectura técnica y la experiencia de usuario óptima.',
-      links: [
-        { title: 'Sistema de diseño', url: '#' },
-        { title: 'Prototipos Figma', url: '#' }
-      ]
+      title: 'Escenificación (role-play)',
+      summary: 'Ensayo con objetos reales (linterna, crucifijo y biblia) para validar mecánicas base.',
+      media: [
+        { type: 'image', src: processEscena},
+        { type: 'image', src: processEscena2},
+        { type: 'image', src: processEscena3},
+        { type: 'image', src: processEscena4},
+        { type: 'image', src: processEscena5}
+      ],
+      links: []
     },
     {
       id: 3,
-      title: 'Desarrollo',
-      media: { type: 'image' as const, src: projectIot },
-      summary: 'Implementación ágil con sprints de 2 semanas. Desarrollo frontend y backend con testing continuo y revisiones de código.',
-      links: [
-        { title: 'Guías de desarrollo', url: '#' },
-        { title: 'Estándares de código', url: '#' }
-      ]
-    },
-    {
-      id: 4,
-      title: 'Testing',
-      media: { type: 'image' as const, src: projectAcademic },
-      summary: 'Pruebas unitarias, de integración y end-to-end. Testing de usabilidad y performance con usuarios reales.',
-      links: [
-        { title: 'Plan de testing', url: '#' },
-        { title: 'Automatización QA', url: '#' }
-      ]
-    },
-    {
-      id: 5,
-      title: 'Deploy',
-      media: { type: 'image' as const, src: projectEcommerce },
-      summary: 'Despliegue automático con CI/CD, monitoreo en producción y soporte post-lanzamiento. Documentación completa para el cliente.',
-      links: [
-        { title: 'Pipeline DevOps', url: '#' },
-        { title: 'Documentación', url: '#' }
-      ]
+      title: 'Maqueta interactiva',
+      summary: 'Prototipo a escala: control del personaje y navegación por todo el entorno.',
+      media: [
+        { type: 'image', src: processMaqueta}
+      ],
+      links: []
     }
   ]
 };
+
 
 const mockRepos: Repository[] = [
   {
