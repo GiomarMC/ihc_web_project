@@ -6,20 +6,6 @@ import avatarAna from "@/assets/hero-bg.jpg";
 import avatarCarlos from "@/assets/hero-bg.jpg";
 import avatarMaria from "@/assets/hero-bg.jpg";
 import avatarDiego from "@/assets/hero-bg.jpg";
-import processBocetos from "@/assets/process/bocetos.jpg";
-import processBocetos1 from "@/assets/process/bocetos1.jpeg";
-import processBocetos2 from "@/assets/process/bocetos2.jpeg";
-import processBocetos3 from "@/assets/process/bocetos3.jpeg";
-import processBocetos4 from "@/assets/process/bocetos4.jpeg";
-import processBocetos5 from "@/assets/process/bocetos5.jpeg";
-import processEscena from "@/assets/process/escena.jpg";
-import processEscena1 from "@/assets/process/escena1.jpeg";
-import processEscena2 from "@/assets/process/escena2.jpeg";
-import processEscena3 from "@/assets/process/escena3.jpeg";
-import processEscena4 from "@/assets/process/escena4.jpeg";
-import processEscena5 from "@/assets/process/escena5.jpeg";
-import processMaqueta from "@/assets/process/maqueta.jpg";
-import processMaqueta2 from "@/assets/process/maqueta2.jpeg";
 
 export interface Project {
   id: string;
@@ -120,11 +106,11 @@ const mockProcess: Process = {
       title: 'Bosquejos (low-fi)',
       summary: 'Bocetos en papel, mapa del departamento y reglas básicas del juego.',
       media: [
-        { type: 'image', src: processBocetos},
-        { type: 'image', src: processBocetos2},
-        { type: 'image', src: processBocetos3},
-        { type: 'image', src: processBocetos4},
-        { type: 'image', src: processBocetos5}
+        { type: 'image', src: '/process/bocetos.jpg' },
+        { type: 'image', src: '/process/bocetos2.jpeg' },
+        { type: 'image', src: '/process/bocetos3.jpeg' },
+        { type: 'image', src: '/process/bocetos4.jpeg' },
+        { type: 'image', src: '/process/bocetos5.jpeg' }
       ],
       links: []
     },
@@ -133,11 +119,11 @@ const mockProcess: Process = {
       title: 'Escenificación (role-play)',
       summary: 'Ensayo con objetos reales (linterna, crucifijo y biblia) para validar mecánicas base.',
       media: [
-        { type: 'image', src: processEscena2},
-        { type: 'image', src: processEscena},
-        { type: 'image', src: processEscena3},
-        { type: 'image', src: processEscena4},
-        { type: 'image', src: processEscena5}
+        { type: 'image', src: '/process/escena2.jpeg' },
+        { type: 'image', src: '/process/escena.jpg' },
+        { type: 'image', src: '/process/escena3.jpeg' },
+        { type: 'image', src: '/process/escena4.jpeg' },
+        { type: 'image', src: '/process/escena5.jpeg' }
       ],
       links: []
     },
@@ -146,8 +132,8 @@ const mockProcess: Process = {
       title: 'Maqueta interactiva',
       summary: 'Prototipo a escala: control del personaje y navegación por todo el entorno.',
       media: [
-        { type: 'image', src: processMaqueta},
-        { type: 'image', src: processMaqueta2}
+        { type: 'image', src: '/process/maqueta.jpg' },
+        { type: 'image', src: '/process/maqueta2.jpeg' }
       ],
       links: []
     }
