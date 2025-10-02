@@ -51,12 +51,12 @@ const Team = () => {
         <div 
           ref={headerRef}
           className={cn(
-            "text-center transition-all duration-700 transform",
+            "text-left transition-all duration-700 transform",
             headerInView ? "animate-fade-in" : "opacity-0 translate-y-8"
           )}
         >
           <h2 className="text-4xl font-bold text-text-primary mb-4">Nuestro Equipo</h2>
-          <p className="text-text-secondary text-lg mb-12 max-w-2xl mx-auto">
+          <p className="text-text-secondary text-lg mb-12 max-w-2xl">
             Conoce a los "profesionales" que hicieron posible este proyecto.
           </p>
         </div>
