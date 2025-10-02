@@ -113,30 +113,42 @@ const Process = ({ activeStep, onStepChange }: ProcessProps) => {
                 {currentStep?.title}
               </h3>
               
-              <div className="aspect-video bg-background rounded-lg mb-4 overflow-hidden relative group">
-                {currentStep?.media.type === 'video' ? (
-                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-translucent to-cyan-translucent">
-                    <Button 
-                      size="lg"
-                      className="bg-purple hover:bg-purple/90 shadow-elevated"
-                    >
-                      <Play className="w-6 h-6 mr-2" />
-                      Reproducir Video
-                    </Button>
-                  </div>
-                ) : (
-                  <img 
-                    src={currentStep?.media.src} 
-                    alt={currentStep?.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
-                  />
-                )}
-                
-                {currentStep?.media.type === 'gif' && (
-                  <div className="absolute top-2 right-2 bg-purple text-white px-2 py-1 rounded text-xs font-medium">
-                    GIF
-                  </div>
-                )}
+              <div className="bg-background border border-purple-border/60 rounded-lg mb-4 overflow-hidden">
+                <div className="max-h-80 overflow-y-auto space-y-4 p-4 pr-3">
+                  {currentStep?.media?.length ? (
+                    currentStep.media.map((item, index) => (
+                      <div
+                        key={`${item.src}-${index}`}
+                        className="relative rounded-lg border border-purple-border/60 bg-surface/40 overflow-hidden"
+                      >
+                        {item.type === 'video' ? (
+                          <div className="aspect-video w-full flex items-center justify-center bg-gradient-to-br from-purple-translucent to-cyan-translucent">
+                            <Button size="lg" className="bg-purple hover:bg-purple/90 shadow-elevated">
+                              <Play className="w-6 h-6 mr-2" />
+                              Reproducir Video
+                            </Button>
+                          </div>
+                        ) : (
+                          <img
+                            src={item.src}
+                            alt={item.alt ?? `${currentStep?.title} - recurso ${index + 1}`}
+                            className="w-full max-h-64 object-contain bg-background transition-smooth"
+                          />
+                        )}
+
+                        {item.type === 'gif' && (
+                          <div className="absolute top-2 right-2 bg-purple text-white px-2 py-1 rounded text-xs font-medium">
+                            GIF
+                          </div>
+                        )}
+                      </div>
+                    ))
+                  ) : (
+                    <div className="h-48 flex items-center justify-center text-sm text-text-secondary">
+                      Sin material visual disponible por ahora.
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="flex items-center justify-between">
