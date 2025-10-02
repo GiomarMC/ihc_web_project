@@ -56,7 +56,7 @@ export interface TeamMember {
   skills: string[];
   links: {
     github?: string;
-    linkedin?: string;
+    mail?: string;
   };
 }
 
@@ -174,43 +174,43 @@ const mockRepos: Repository[] = [
 
 const mockTeam: TeamMember[] = [
   {
-    name: 'Ana García',
-    role: 'Full Stack Developer',
-    avatar: avatarAna,
-    skills: ['React', 'Node.js', 'TypeScript'],
-    links: {
-      github: 'https://github.com/anagarcia',
-      linkedin: 'https://linkedin.com/in/anagarcia'
-    }
-  },
-  {
-    name: 'Carlos López',
-    role: 'DevOps Engineer',
+    name: 'Leonardo Gaona Briceño',
+    role: 'Programador',
     avatar: avatarCarlos,
-    skills: ['Docker', 'AWS', 'Kubernetes'],
+    skills: ['C#', 'Unity', 'C++'],
     links: {
-      github: 'https://github.com/carloslopez',
-      linkedin: 'https://linkedin.com/in/carloslopez'
+      github: 'https://github.com/LeonardoGB29',
+      mail: 'mailto:lgaonab@unsa.edu.pe'
     }
   },
   {
-    name: 'María Rodríguez',
-    role: 'UX/UI Designer',
+    name: 'Giomar Muñoz Curi',
+    role: 'Programador',
+    avatar: avatarAna,
+    skills: ['React', 'Unity', 'TypeScript'],
+    links: {
+      github: 'https://github.com/GiomarMC',
+      mail: 'mailto:gmunozcu@unsa.edu.pe'
+    }
+  },
+  {
+    name: 'Joselyn Quispe Huanca',
+    role: 'Programadora',
     avatar: avatarMaria,
-    skills: ['Figma', 'Adobe XD', 'Design Systems'],
+    skills: ['React', 'TypeScript', 'CSS'],
     links: {
-      github: 'https://github.com/mariarodriguez',
-      linkedin: 'https://linkedin.com/in/mariarodriguez'
+      github: 'https://github.com/SabinaPia',
+      mail: 'mailto:joquispehua@unsa.edu.pe'
     }
   },
   {
-    name: 'Diego Martínez',
-    role: 'Data Scientist',
+    name: 'Kristopher Rospigliosi Gonzales',
+    role: 'Programador',
     avatar: avatarDiego,
-    skills: ['Python', 'TensorFlow', 'SQL'],
+    skills: ['TypeScript', 'C#', 'C++'],
     links: {
-      github: 'https://github.com/diegomartinez',
-      linkedin: 'https://linkedin.com/in/diegomartinez'
+      github: 'https://github.com/krospigliosig',
+      mail: 'mailto:krospigliosig@unsa.edu.pe'
     }
   }
 ];
