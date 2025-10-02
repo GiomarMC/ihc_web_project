@@ -19,6 +19,7 @@ import processEscena3 from "@/assets/process/escena3.jpeg";
 import processEscena4 from "@/assets/process/escena4.jpeg";
 import processEscena5 from "@/assets/process/escena5.jpeg";
 import processMaqueta from "@/assets/process/maqueta.jpg";
+import processMaqueta2 from "@/assets/process/maqueta2.jpeg";
 
 export interface Project {
   id: string;
@@ -132,8 +133,8 @@ const mockProcess: Process = {
       title: 'Escenificación (role-play)',
       summary: 'Ensayo con objetos reales (linterna, crucifijo y biblia) para validar mecánicas base.',
       media: [
-        { type: 'image', src: processEscena},
         { type: 'image', src: processEscena2},
+        { type: 'image', src: processEscena},
         { type: 'image', src: processEscena3},
         { type: 'image', src: processEscena4},
         { type: 'image', src: processEscena5}
@@ -145,7 +146,8 @@ const mockProcess: Process = {
       title: 'Maqueta interactiva',
       summary: 'Prototipo a escala: control del personaje y navegación por todo el entorno.',
       media: [
-        { type: 'image', src: processMaqueta}
+        { type: 'image', src: processMaqueta},
+        { type: 'image', src: processMaqueta2}
       ],
       links: []
     }
