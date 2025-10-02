@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { Github, Linkedin, ExternalLink } from "lucide-react";
+import { Github, Mail, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { api, TeamMember } from "@/services/mockApi";
@@ -57,8 +57,7 @@ const Team = () => {
         >
           <h2 className="text-4xl font-bold text-text-primary mb-4">Nuestro Equipo</h2>
           <p className="text-text-secondary text-lg mb-12 max-w-2xl mx-auto">
-            Conoce a los profesionales que hacen posible cada proyecto, 
-            combinando experiencia técnica con pasión por la innovación.
+            Conoce a los "profesionales" que hicieron posible este proyecto.
           </p>
         </div>
 
@@ -120,8 +119,10 @@ const Team = () => {
                     <Badge 
                       variant="secondary" 
                       className="bg-cyan-translucent text-cyan border-cyan/30 text-xs px-2 py-1"
+                      title={member.skills.slice(2).join(", ")}
                     >
                       +{member.skills.length - 2}
+                      
                     </Badge>
                   )}
                 </div>
@@ -139,41 +140,18 @@ const Team = () => {
                       <Github className="w-4 h-4" />
                     </Button>
                   )}
-                  {member.links.linkedin && (
+                  {member.links.mail && (
                     <Button
                       size="sm"
                       variant="outline"
                       className="w-9 h-9 p-0 border-purple-border bg-purple-translucent hover:bg-purple/10 hover:border-cyan/50"
-                      onClick={() => window.open(member.links.linkedin, '_blank')}
-                      title="LinkedIn"
+                      onClick={() => window.open(member.links.mail, '_blank')}
+                      title="Mail"
                     >
-                      <Linkedin className="w-4 h-4" />
+                      <Mail className="w-4 h-4" />
                     </Button>
                   )}
                 </div>
-              </div>
-
-              {/* Hover overlay with all skills */}
-              <div className="absolute inset-0 bg-surface/95 border border-cyan rounded-xl p-4 opacity-0 group-hover:opacity-100 transition-smooth flex flex-col justify-center items-center">
-                <h4 className="text-sm font-semibold text-text-primary mb-2">Especialidades</h4>
-                <div className="flex flex-wrap gap-1 justify-center">
-                  {member.skills.map(skill => (
-                    <Badge 
-                      key={skill}
-                      className="bg-purple text-white text-xs px-2 py-1"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-                <Button
-                  size="sm"
-                  className="mt-3 bg-cyan text-white hover:bg-cyan/90"
-                  onClick={() => window.open(member.links.linkedin || member.links.github, '_blank')}
-                >
-                  <ExternalLink className="w-3 h-3 mr-1" />
-                  Conectar
-                </Button>
               </div>
             </div>
           ))}
