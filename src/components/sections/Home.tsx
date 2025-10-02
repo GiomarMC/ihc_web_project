@@ -26,7 +26,7 @@ const Home = () => {
     <div className="flex items-center justify-center gap-6 mb-6">
       {/* Logo */}
       <img 
-        src="/src/assets/logo.png" 
+        src="/home/logo.png" 
         alt="Logo" 
         className="w-40 h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 object-contain"
       />
