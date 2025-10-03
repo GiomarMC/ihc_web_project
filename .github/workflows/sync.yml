@@ -2,7 +2,7 @@ name: Sync Fork
 
 on:
   schedule:
-    - cron: '*/60 * * * *'   # cada 60 minutos
+    - cron: '0 6 * * *'   # cada día a las 06:00 UTC
   workflow_dispatch:         # también lo puedes ejecutar manualmente desde Actions
 
 jobs:
